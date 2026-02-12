@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import AddStaffForm from "@/components/dashboard/staff/AddStaffForm";
 
 const AddStaffPage = () => {
   return (
     <div className="w-full">
-      <AddStaffForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <AddStaffForm />
+      </Suspense>
     </div>
   );
 };
